@@ -122,7 +122,7 @@ function App() {
 
   const claimNFTs = () => {
     let cost = 0;
-    let supply = -1;
+    let supply = 2001;
     blockchain.smartContract.methods.totalSupply().call((err, result) => {
       if(err){
         console.error('Error: ', err);
@@ -141,7 +141,7 @@ function App() {
       cost = 0;
     }
     else {
-      cost = 0.005;
+      cost = Web3.utils.toBN(Web3.utils.toWei("0.005", "ether"));
     }
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
