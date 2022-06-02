@@ -128,6 +128,7 @@ function App() {
     else {
       cost = 0.005;
     }
+    console.log("Total Supply: ", blockchain.smartContract.methods.totalSupply());
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
     let totalGasLimit = String(gasLimit * mintAmount);
