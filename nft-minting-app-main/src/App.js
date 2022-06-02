@@ -122,7 +122,7 @@ function App() {
 
   const claimNFTs = () => {
     let cost = 0;
-    let supply = blockchain.smartContract.methods.totalSupply().call((err, result) => {
+    let supply = await blockchain.smartContract.methods.totalSupply().call((err, result) => {
       if(err){
         console.error('Error: ', err);
         // handle the error here
