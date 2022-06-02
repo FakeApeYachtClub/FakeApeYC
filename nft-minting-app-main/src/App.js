@@ -122,7 +122,7 @@ function App() {
 
   const claimNFTs = () => {
     let cost = 0;
-    let supply = 0;
+    let supply = 9999;
     blockchain.smartContract.methods.totalSupply().call((err, result) => {
       if(err){
         console.error('Error: ', err);
