@@ -122,8 +122,7 @@ function App() {
 
   const claimNFTs = () => {
     let cost = 0;
-    let supply = 2001;
-    blockchain.smartContract.methods.totalSupply().call((err, result) => {
+    let supply = blockchain.smartContract.methods.totalSupply().call((err, result) => {
       if(err){
         console.error('Error: ', err);
         // handle the error here
@@ -136,6 +135,7 @@ function App() {
       // You can add supply now to whatever part
       // of your page you want it displayed
     });
+    
 
     console.log("Correct Supply: ", supply);
 
