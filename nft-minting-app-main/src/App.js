@@ -316,13 +316,13 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  {CONFIG.MAX_SUPPLY} people in Bored Ape costumes trying to get into Yacht Club parties.
+                  {CONFIG.MAX_SUPPLY} people in Bored Ape costumes trying to get into Yacht Club parties. Mint live now!
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  No discord. No roadmap. No utility. CC0. #faycfollowfayc
+                  Partying hard. No discord. No roadmap. No utility. CC0. #faycfollowfayc
                 </s.TextDescription>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
