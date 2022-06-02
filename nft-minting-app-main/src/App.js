@@ -161,7 +161,7 @@ function App() {
       })
       .once("error", (err) => {
         console.log(err);
-        setFeedback("Sorry, something went wrong please try again later.");
+        setFeedback("Chance you have minted your FAYC. Check OpenSea or Etherscan!");
         setClaimingNft(false);
       })
       .then((receipt) => {
