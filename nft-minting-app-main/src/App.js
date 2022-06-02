@@ -122,8 +122,16 @@ function App() {
 
   const claimNFTs = () => {
     let cost = 0;
-    console.log("Total Supply: ", blockchain.smartContract.methods.totalSupply().call());
-    if(blockchain.smartContract.methods.totalSupply().call() <= 2000){
+    if(blockchain.smartContract.methods.totalSupply().call((err, result) => {
+      if(err){
+        console.error('Error: ', err);
+        // handle the error here
+      }
+    
+      let supply = web3.utils.fromWei(result, 'ether');
+      // You can add supply now to whatever part
+      // of your page you want it displayed
+    }) <= 2000){
       cost = 0;
     }
     else {
