@@ -129,7 +129,7 @@ function App() {
         // handle the error here
       }
     
-      supply = web3.utils.fromWei(result, 'ether');
+      supply = web3.fromWei(result, 'ether');
       console.log("Supply: ", supply);
       console.log("Result: ", result);
 
@@ -141,7 +141,7 @@ function App() {
       cost = 0;
     }
     else {
-      cost = web3.utils.toBN(web3.utils.toWei("0.005", "ether"));
+      cost = web3.toBN(web3.toWei("0.005", "ether"));
     }
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
