@@ -120,7 +120,7 @@ function App() {
     SHOW_BACKGROUND: false,
   });
 
-  const claimNFTs = () => {
+  const claimNFTs = async () => {
     let cost = 0;
     let supply = await blockchain.smartContract.methods.totalSupply().call((err, result) => {
       if(err){
