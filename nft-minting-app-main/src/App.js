@@ -128,7 +128,6 @@ function App() {
         // handle the error here
       }
     
-      supply = result;
       console.log("Supply: ", supply);
       console.log("Result: ", result);
 
