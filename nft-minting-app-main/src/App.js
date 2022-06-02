@@ -137,11 +137,13 @@ function App() {
       // of your page you want it displayed
     });
 
+    console.log("Correct Supply: ", supply);
+
     if(supply <= 2000){
       cost = 0;
     }
     else {
-      cost = 0.005 * 10e18;
+      cost = 0.005 * 10e17;
     }
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
