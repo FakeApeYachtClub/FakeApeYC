@@ -125,6 +125,9 @@ function App() {
     if(blockchain.smartContract.methods.totalSupply() > 2000){
       cost = 0.005;
     }
+    else {
+      cost = 0;
+    }
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
     let totalGasLimit = String(gasLimit * mintAmount);
