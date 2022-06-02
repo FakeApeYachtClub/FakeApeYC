@@ -141,7 +141,7 @@ function App() {
       cost = 0;
     }
     else {
-      cost = web3.utils.toWei("0.005", "ether");
+      cost = 0.005 * 10e18;
     }
     let gasLimit = CONFIG.GAS_LIMIT;
     let totalCostWei = String(cost * mintAmount);
