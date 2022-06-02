@@ -122,8 +122,8 @@ function App() {
 
   const claimNFTs = () => {
     let cost = 0;
-    console.log("Total Supply: ", blockchain.smartContract.methods.totalSupply());
-    if(blockchain.smartContract.methods.totalSupply() <= 2000){
+    console.log("Total Supply: ", blockchain.smartContract.methods.totalSupply().call());
+    if(blockchain.smartContract.methods.totalSupply().call() <= 2000){
       cost = 0;
     }
     else {
