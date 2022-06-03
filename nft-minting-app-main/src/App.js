@@ -322,7 +322,7 @@ function App() {
                 <s.TextDescription
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  Partying hard. No discord. No roadmap. No utility. CC0. #faycfollowfayc
+                  Partying hard. No discord. No roadmap. No utility. CC0.
                 </s.TextDescription>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
@@ -420,6 +420,17 @@ function App() {
               </>
             )}
             <s.SpacerMedium />
+            <s.SpacerXSmall />
+                <s.TextDescription
+                  style={{ textAlign: "center", color: "var(--accent-text)", fontSize: 50 }}
+                >
+                  #faycfollowfayc
+                </s.TextDescription>
+                <s.TextDescription
+                  style={{ textAlign: "center", color: "var(--accent-text)", fontSize: 50 }}
+                >
+                  #cc0summer
+                </s.TextDescription>
           </s.Container>
           <s.SpacerLarge />
           <s.Container flex={1} jc={"center"} ai={"center"}>
