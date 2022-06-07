@@ -99,8 +99,8 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`First 2000 FREE + gas. Max 5 per tx. 10 per wallet. .005 ETH after 2000 claimed.`);
-  const [mintAmount, setMintAmount] = useState(5);
+  const [feedback, setFeedback] = useState(`100% FREE + gas. Max 10 per wallet. Party hard.`);
+  const [mintAmount, setMintAmount] = useState(10);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
     SCAN_LINK: "",
@@ -127,14 +127,14 @@ function App() {
         console.error('Error: ', err);
         // handle the error here
       }
-    
+
       console.log("Supply: ", supply);
       console.log("Result: ", result);
 
       // You can add supply now to whatever part
       // of your page you want it displayed
     });
-    
+
 
     console.log("Correct Supply: ", supply);
 
@@ -149,7 +149,7 @@ function App() {
     let totalGasLimit = String(gasLimit);
     console.log("Cost: ", totalCostWei);
     console.log("Gas limit: ", totalGasLimit);
-    setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
+    setFeedback(`Minting your ${CONFIG.NFT_NAME} tokens...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
       .Mint(mintAmount)
@@ -184,8 +184,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 5) {
-      newMintAmount = 5;
+    if (newMintAmount > 10) {
+      newMintAmount = 10;
     }
     setMintAmount(newMintAmount);
   };
@@ -260,17 +260,25 @@ function App() {
                 color: "var(--primary-text)",
               }}
             >
+              </s.TextDescription>
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {"Contract: " + truncate(CONFIG.CONTRACT_ADDRESS, 15)}
-              </StyledLink>
-            </s.TextDescription>
-            <span
+                {">> Or Mint on Contract <<"}
+                </StyledLink>
+              <s.TextDescription
               style={{
                 textAlign: "center",
                 color: "var(--primary)",
               }}
+              >
+            </s.TextDescription>
+            
+            <span
+              style={{
+                textAlign: "center",
+                color: "var(--link)",
+              }}
             >
-              
+
               {/* <StyledButton
                 onClick={(e) => {
                   window.open("/config/roadmap.pdf", "_blank");
@@ -281,7 +289,7 @@ function App() {
               >
                 Roadmap
               </StyledButton> */}
-              
+
               <StyledButton
                 style={{
                   margin: "5px",
@@ -316,7 +324,7 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  {CONFIG.MAX_SUPPLY} people in Bored Ape costumes trying to get into Yacht Club parties. Mint live now!
+                  {CONFIG.MAX_SUPPLY} people in Bored Ape costumes trying to get into Yacht Club parties. Mint 100% FREE and live now!
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
@@ -461,8 +469,7 @@ function App() {
             }}
           >
             We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
-            successfully mint your NFT. We recommend that you don't lower the
-            gas limit.
+            successfully mint your NFT. It is a very optimized contract and will almost always cost less than the max transaction fee.
           </s.TextDescription>
         </s.Container>
       </s.Container>
