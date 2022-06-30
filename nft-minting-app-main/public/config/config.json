@@ -1,6 +1,6 @@
 {
   "CONTRACT_ADDRESS": "0xad3cfc77f0415a1a54c95cb1cd421ab8ad8ed0fc",
-  "SCAN_LINK": "https://etherscan.io/address/0xad3cfc77f0415a1a54c95cb1cd421ab8ad8ed0fc",
+  "SCAN_LINK": "https://etherscan.io/address/0xad3cfc77f0415a1a54c95cb1cd421ab8ad8ed0fc#writeContract",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
@@ -9,7 +9,7 @@
   "NFT_NAME": "Fake Ape Yacht Club",
   "SYMBOL": "FAYC",
   "MAX_SUPPLY": 5555,
-  "WEI_COST": 4000000000000000000,
+  "WEI_COST": 0,
   "DISPLAY_COST": 0,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opensea",
